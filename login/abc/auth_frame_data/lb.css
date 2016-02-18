@@ -1,0 +1,125 @@
+
+
+
+
+#lb_auth_container {
+	display: block;
+	font-family: sans-serif;
+	margin: 6px 0 0 0;
+	min-height: 124px;
+}
+
+#lb_update_container  {
+	display: block;
+	font-family: sans-serif;
+	margin: 6px 0 0 0;
+	min-height: 124px;
+}
+
+#lb_signup_container {
+	display: none;
+}
+#lb_username_container {
+}
+#lb_password_container {
+}
+#lb_email_container {
+}
+#lb_tag_new_user {
+}
+#lb_signup_checkbox {
+}
+#lb_password_field, #lb_email_field {
+
+}
+#lb_forgot_password_checkbox_container {
+  float: right;
+  padding: 0px;
+  padding-bottom: 25px;
+}
+#lb_tag_forgot_password_label {
+  font-weight: normal;
+  font-style: italic;
+  float:left;
+  padding:4px 2px 0px 0px;
+  line-height: 100%;
+  color:gray;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+#lb_tag_forgot_password_label:a { text-decoration: none; }
+#lb_tag_forgot_password_label:hover { text-decoration: none; }
+
+#lb_login_container {
+  clear:both;
+  text-align: center;
+}
+
+#lb_form_submit {
+	clear:both;
+	background-color:#005481;
+	border:none;
+	color:#eee;
+	cursor: pointer;
+	font-weight: normal;
+	font-size: 11px;
+	text-transform: uppercase;
+	overflow: visible;
+	padding: 9px 30px;
+	text-align: center;	
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+}
+.lb_field {
+  color: #666;
+	font-size: 16px;
+	height: 28px;
+	line-height: 22px;
+	margin: 4px 0px 10px 0px;
+	padding: 5px 0px 0px 5px;
+	position: relative;
+	width: 260px;
+}
+
+.lb_field_tag {
+	font-weight: emph;
+	font-size: 11px;
+	color: #333639;
+	display: block;
+	font-family: Helvetica !important;
+	text-decoration: none;
+}
+input:focus, textarea:focus{
+	background-color: #DEFEFF;
+	color: #333;
+}
+
+#lb_diag_message {
+	display: none;
+	font-size: 9px;
+	color: #ccc;
+}
+
+#lb_auth_error {
+  font-size: 12px;
+}
+#lb_update_error {
+  font-size: 12px;
+}
+
+.lb_age_block {
+  float: left;
+  margin: 0 10px 18px 0;
+}
+
+
+.medium {
+  color: #323739;
+  font-size: 16px;
+  
+}
+

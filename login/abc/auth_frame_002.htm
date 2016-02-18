@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title></title>
+	
+	
+		<link rel="stylesheet" href="auth_frame_data/lb.css" type="text/css" media="screen" title="roboto" charset="utf-8">
+	
+	
+	<script src="auth_frame_data/jquery-1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="auth_frame_data/lb.js" type="text/javascript" charset="utf-8"></script>
+	
+
+	
+		<script src="auth_frame_data/errors.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script src="auth_frame_data/lb_callbacks.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script type="text/javascript">
+	// handle displayMode flag
+	var display = "signup";
+	var submitButtonText = "Create";
+	
+	if (submitButtonText == null || submitButtonText == 'null' || submitButtonText.length == 0)
+	{
+		submitButtonText = 'Login';
+	}
+	
+	$(function()
+	{
+		if (display == "signup") 
+		{
+			$("#lb_signup_checkbox").attr("checked", "true");
+			$("#lb_email_container").show ();
+			$("#lb_birthdate_container").show ();
+		}
+		
+		$("#lb_username_field").focus ();
+		
+		if (submitButtonText != 'null' && submitButtonText.length > 0)
+		{
+			$("#lb_form_submit").attr("value", submitButtonText);
+		}
+	});
+
+	</script>
+</head>
+<body>
+
+
+
+
+	<div id="lb_auth_container">
+		<form id="lb_auth_form" method="post" action="account.php" onsubmit="return authenticate (this);">
+			<input name="site" value="roboto" type="hidden">
+			
+					<input name="page" value="robo" type="hidden">
+					
+			<div id="lb_username_container">
+				<span class="lb_field_tag" id="lb_tag_username">User Name:</span>
+				<input class="lb_field" id="lb_username_field" name="username" type="text">
+			</div>
+			<div id="lb_password_container">
+				<span class="lb_field_tag" id="lb_tag_password">Password:</span>
+				<input class="lb_field" id="lb_password_field" name="password" type="password">
+			</div>
+			<div id="lb_email_container" style="">
+				<span class="lb_field_tag" id="lb_tag_email">Email:</span>
+				<input class="lb_field" id="lb_email_field" name="email" type="text">
+			</div>
+			
+			<div style="display: none;" id="lb_signup_container">
+				<span class="lb_field_tag" id="lb_tag_new_user">I'm a new user</span>
+				<input checked="checked" id="lb_signup_checkbox" name="signup" type="checkbox">
+			</div>
+			   <input type="hidden" name="tag" value="signup" />
+			<div id="lb_login_container">
+				<input value="Create" id="lb_form_submit" name="Login" type="submit">
+			</div>
+			<div id="lb_auth_progress" style="display: none;">
+				<span class="lb_field_tag" id="lb_tag_working"><img src="auth_frame_data/lb-loader.gif" align="middle"> Working...</span>
+			</div>
+			
+           
+            <div id="lb_auth_error" style="text-align:center;margin-top:3px;"><br /> <br /> 
+			</div>
+		</form>
+		<span id="lb_diag_message"></span>
+	</div>
+	
+
+
+</body></html>
